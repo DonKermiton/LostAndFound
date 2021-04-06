@@ -1,12 +1,14 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using api.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace api
 {
     public interface ILostPerson
     {
         public List<Lost> GetAllLost();
+        public List<Lost> GetSelected(int take, int skip);
     }
     
     public class LostPersonService: ILostPerson
@@ -22,6 +24,20 @@ namespace api
         {
             var lostPersons = _dbContext.Lost.ToList();
             return lostPersons;
-        } 
+        }
+
+
+        public List<Lost> GetSelected(int take, int skip)
+        {
+            var lostPersons = _dbContext
+                .Lost                
+                .Include(u => u.AddedBy)
+                .Skip(skip)
+                .Take(take)
+                .ToList();
+            
+
+            return lostPersons;
+        }
     }
 }

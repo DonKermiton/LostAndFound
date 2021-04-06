@@ -1,4 +1,6 @@
-﻿using api.Models;
+﻿using System;
+using api.Entities;
+using api.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace api.Controllers
@@ -21,10 +23,12 @@ namespace api.Controllers
             return Ok();
         }
         [HttpPost("login")]
-        public ActionResult Login([FromBody] LoginDto dto)
+        public ActionResult<string> Login([FromBody] LoginDto dto)
         {
             string token = _accountService.GenerateJwt(dto);
             return Ok(token);
         }
+
+        
     }
 }

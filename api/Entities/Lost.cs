@@ -17,6 +17,6 @@ namespace api.Entities
         public string Nationality { get; set; }
 
         public virtual User? AddedBy { get; set; }
-        public virtual List<Images>? Images { get; set; }
+        public virtual List<Images?> Images { get; set; }
     }
 }

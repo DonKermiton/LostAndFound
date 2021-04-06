@@ -1,0 +1,45 @@
+<div id="login-wrapper" class="row h-100 m7">
+  <form class="col offset-s4 s4" [formGroup]="LoginForm" (ngSubmit)="onSubmit()">
+    <div class="row">
+      <div class="input-field col s12">
+        <label for="email">Email</label>
+        <input type="email"
+               id="email"
+               formControlName="Email">
+        <span *ngIf="controlFormError('Email')">Email is not valid</span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <label for="password">Password</label>
+        <input type="password"
+               id="password"
+               formControlName="Password">
+        <span
+          *ngIf="controlFormError('Password')">Password is not valid</span>
+      </div>
+    </div>
+    <div class="row">
+      <button
+        class="btn waves-effect waves-light w-100"
+        type="submit">
+        Login
+      </button>
+    </div>
+    <hr>
+    <div class="row ">
+      <button class="btn waves-effect waves-light w-100 blue darken-2"
+              type="button"
+              routerLink="/register">
+        Register
+      </button>
+    </div>
+
+    <div class="row">
+      <h5>Already logged</h5>
+      <div>
+        <span>{{userService.TokenUser.Id}}.{{userService.TokenUser.Name}}</span>
+      </div>
+    </div>
+  </form>
+</div>

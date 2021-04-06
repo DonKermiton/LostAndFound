@@ -72,9 +72,10 @@ namespace api
 
             var claims = new List<Claim>()
             {
-                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
-                new Claim(ClaimTypes.Name, $"{user.FirstName} {user.LastName}"),
-                new Claim(ClaimTypes.Role, $"{user.Role}"),
+                new Claim("Id", user.Id.ToString()),
+                new Claim("Name", $"{user.FirstName} {user.LastName}"),
+                new Claim("Role", user.Role.Name),
+                new Claim("RoleId", user.Role.Id.ToString()),
                 new Claim("Nationality", $"{user.Nationality}")
             };
 

@@ -81,6 +81,160 @@ namespace api
                     Nationality = "Poland",
                     
                 },
+                new Lost()
+                {
+                    FirstName = "Adam",
+                    SecondName = "Kowalski",
+                    City="Warsaw",
+                    Age = 32,
+                    Gender = LostGender.Man.ToString(),
+                    LastTimeSaw = DateTime.Today,
+                    Nationality = "Poland",
+                    
+                },
+                new Lost()
+                {
+                    FirstName = "Jadwiga",
+                    SecondName = "Trzebicka",
+                    City="Krakow",
+                    Age = 55,
+                    Gender = LostGender.Woman.ToString(),
+                    LastTimeSaw = DateTime.Now,
+                    Nationality = "Poland",
+                    
+                },
+                new Lost()
+                {
+                    FirstName = "Jan",
+                    SecondName = "Wolski",
+                    City="Warsaw",
+                    Age = 15,
+                    Gender = LostGender.Man.ToString(),
+                    LastTimeSaw = DateTime.Today,
+                    Nationality = "Poland",
+                    
+                },
+                new Lost()
+                {
+                    FirstName = "Monika",
+                    SecondName = "Trąbacz",
+                    City="Warsaw",
+                    Age = 71,
+                    Gender = LostGender.Woman.ToString(),
+                    LastTimeSaw = DateTime.Today,
+                    Nationality = "Poland",
+                    
+                },
+                new Lost()
+                {
+                    FirstName = "Test",
+                    SecondName = "Test 2",
+                    City="Warsaw",
+                    Age = 32,
+                    Gender = LostGender.Man.ToString(),
+                    LastTimeSaw = DateTime.Today,
+                    Nationality = "Poland",
+                    
+                },
+                new Lost()
+                {
+                    FirstName = "Test",
+                    SecondName = "Test 3",
+                    City="Warsaw",
+                    Age = 32,
+                    Gender = LostGender.Man.ToString(),
+                    LastTimeSaw = DateTime.Today,
+                    Nationality = "Poland",
+                    
+                },
+                new Lost()
+                {
+                    FirstName = "Test",
+                    SecondName = "Test 4",
+                    City="Warsaw",
+                    Age = 32,
+                    Gender = LostGender.Man.ToString(),
+                    LastTimeSaw = DateTime.Today,
+                    Nationality = "Poland",
+                    
+                },
+                new Lost()
+                {
+                    FirstName = "Test",
+                    SecondName = "Test 5",
+                    City="Warsaw",
+                    Age = 32,
+                    Gender = LostGender.Man.ToString(),
+                    LastTimeSaw = DateTime.Today,
+                    Nationality = "Poland",
+                    
+                },
+                new Lost()
+                {
+                    FirstName = "Test",
+                    SecondName = "Test 5",
+                    City="Warsaw",
+                    Age = 32,
+                    Gender = LostGender.Man.ToString(),
+                    LastTimeSaw = DateTime.Today,
+                    Nationality = "Poland",
+                    
+                },
+                new Lost()
+                {
+                    FirstName = "Test",
+                    SecondName = "Test 6",
+                    City="Warsaw",
+                    Age = 32,
+                    Gender = LostGender.Man.ToString(),
+                    LastTimeSaw = DateTime.Today,
+                    Nationality = "Poland",
+                    
+                },
+                new Lost()
+                {
+                    FirstName = "Test",
+                    SecondName = "Test 7",
+                    City="Warsaw",
+                    Age = 32,
+                    Gender = LostGender.Man.ToString(),
+                    LastTimeSaw = DateTime.Today,
+                    Nationality = "Poland",
+                    
+                },
+                new Lost()
+                {
+                    FirstName = "Test",
+                    SecondName = "Test 8",
+                    City="Warsaw",
+                    Age = 32,
+                    Gender = LostGender.Man.ToString(),
+                    LastTimeSaw = DateTime.Today,
+                    Nationality = "Poland",
+                    
+                },
+                new Lost()
+                {
+                    FirstName = "Test",
+                    SecondName = "Test 9",
+                    City="Warsaw",
+                    Age = 32,
+                    Gender = LostGender.Man.ToString(),
+                    LastTimeSaw = DateTime.Today,
+                    Nationality = "Poland",
+                    
+                },
+                new Lost()
+                {
+                    FirstName = "Test",
+                    SecondName = "Test 10",
+                    City="Warsaw",
+                    Age = 32,
+                    Gender = LostGender.Man.ToString(),
+                    LastTimeSaw = DateTime.Today,
+                    Nationality = "Poland",
+                    
+                },
             };
 
             return lost;

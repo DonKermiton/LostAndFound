@@ -1,0 +1,9 @@
+<div class="container">
+  <div *ngFor="let lost of LostPeople">
+    <app-lost-person [lost]="lost"></app-lost-person>
+    <hr>
+  </div>
+
+  <a class="waves-effect waves-light btn" (click)="getNextLost()">Add Next</a>
+</div>
+

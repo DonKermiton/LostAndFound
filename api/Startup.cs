@@ -57,12 +57,24 @@ namespace api
             services.AddScoped<DbSeeder>();
             services.AddScoped<ILostPerson, LostPersonService>();
             services.AddScoped<IAccountService, AccountService>();
+            services.AddScoped<IUserService, UserService>();
             services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
+            
+            services.AddCors(options =>
+            {
+                options.AddPolicy("FrontEndClient", builder =>
+                {
+                    builder.AllowAnyMethod()
+                        .AllowAnyHeader()
+                        .AllowAnyOrigin();
+                });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, DbSeeder dbSeeder)
         {
+            app.UseCors("FrontEndClient");
             dbSeeder.Seed();
             if (env.IsDevelopment())
             {
