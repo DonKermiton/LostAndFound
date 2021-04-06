@@ -11,7 +11,7 @@ namespace api.Entities
         public string SecondName { get; set; }
         public string City { get; set; }
         public int Age { get; set; }
-        public LostGender Gender { get; set; }
+        public string Gender { get; set; }
         public DateTime LastTimeSaw { get; set; } 
                 
         public string Nationality { get; set; }

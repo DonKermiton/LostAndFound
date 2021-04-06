@@ -65,7 +65,7 @@ namespace api
                     SecondName = "Pietrucha",
                     City="Warsaw",
                     Age = 18,
-                    Gender = LostGender.Man,
+                    Gender = LostGender.Man.ToString(),
                     LastTimeSaw = DateTime.Today,
                     Nationality = "Poland",
                     
@@ -76,7 +76,7 @@ namespace api
                     SecondName = "Kowalski",
                     City="Warsaw",
                     Age = 32,
-                    Gender = LostGender.Man,
+                    Gender = LostGender.Man.ToString(),
                     LastTimeSaw = DateTime.Today,
                     Nationality = "Poland",
                     
