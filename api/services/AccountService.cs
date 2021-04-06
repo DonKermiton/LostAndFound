@@ -5,6 +5,8 @@ using System.Linq;
 using System.Security.Claims;
 using System.Text;
 using api.Entities;
+using api.Exception;
+using api.Middleware;
 using api.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -56,8 +58,7 @@ namespace api
 
             if (user is null)
             {
-                //TODO add custom exception
-                throw new Exception("No user");
+                throw new BadRequestException("Invalid Username or password");
             }
 
             var result = _passwordHasher.VerifyHashedPassword(user,
@@ -66,8 +67,7 @@ namespace api
 
             if (result == PasswordVerificationResult.Failed)
             {
-                //TODO add exception and change message
-                throw new Exception("Wrong password");
+                throw new BadRequestException("Invalid Username or password");
             }
 
             var claims = new List<Claim>()

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using api.Entities;
+using api.Middleware;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -52,6 +53,7 @@ namespace api
 
             services.AddControllers();
             services.AddScoped<LostDbContext>();
+            services.AddScoped<ErrorHandlingMiddleware>();
             services.AddScoped<DbSeeder>();
             services.AddScoped<ILostPerson, LostPersonService>();
             services.AddScoped<IAccountService, AccountService>();
@@ -66,7 +68,7 @@ namespace api
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            app.UseMiddleware<ErrorHandlingMiddleware>();
             app.UseAuthentication();
             app.UseHttpsRedirection();
             app.UseRouting();
