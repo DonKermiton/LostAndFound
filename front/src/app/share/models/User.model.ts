@@ -1,10 +1,10 @@
 export interface User {
-  Id: number;
-  Email: string;
-  FirstName: string;
-  LastName: string;
-  Nationality: string;
-  RoleId: number;
+  id: number;
+  email: string;
+  firstName: string;
+  lastName: string;
+  nationality: string;
+  roleId: number;
 }
 
 export interface UserToken {

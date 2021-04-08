@@ -42,6 +42,8 @@ namespace api
                 Email = dto.Email,
                 RoleId = dto.RoleId,
                 Nationality = dto.Nationality,
+                FirstName = dto.FirstName,
+                LastName = dto.SecondName
             };
             var hashedPassword = _passwordHasher.HashPassword(newUser, dto.Password);
             newUser.PasswordHash = hashedPassword;

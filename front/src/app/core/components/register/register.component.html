@@ -1,1 +1,59 @@
-<p>register works!</p>
+<div class="container">
+  <form class="col offset-s4 s4" [formGroup]="RegisterForm" (ngSubmit)="onSubmit()">
+    <div class="row">
+      <div class="input-field col s12">
+        <label for="email">Email</label>
+        <input type="email"
+               id="email"
+               formControlName="Email">
+        <span *ngIf="controlFormError('Email')">Email is not valid</span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <label for="password">Password</label>
+        <input type="password"
+               id="password"
+               formControlName="Password">
+        <span
+          *ngIf="controlFormError('Password')">Password is not valid</span>
+      </div>
+    </div>    <div class="row">
+      <div class="input-field col s12">
+        <label for="firstName">firstName</label>
+        <input type="text"
+               id="firstName"
+               formControlName="FirstName">
+        <span
+          *ngIf="controlFormError('FirstName')">Password is not valid</span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <label for="SecondName">SecondName</label>
+        <input type="text"
+               id="SecondName"
+               formControlName="SecondName">
+        <span
+          *ngIf="controlFormError('SecondName')">Password is not valid</span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <label for="Nationality">Nationality</label>
+        <input type="text"
+               id="Nationality"
+               formControlName="Nationality">
+        <span
+          *ngIf="controlFormError('Nationality')">Password is not valid</span>
+      </div>
+    </div>
+    <div class="row">
+      <button
+        class="btn waves-effect waves-light w-100"
+        type="submit">
+        Register
+      </button>
+    </div>
+  </form>
+</div>

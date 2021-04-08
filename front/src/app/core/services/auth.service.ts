@@ -30,6 +30,13 @@ export class AuthService {
       );
   }
 
+  register(registerCredentials: { Email: string, Password: string, FirstName: string, SecondName: string, Nationality: string }): Observable<boolean> {
+    return this.http.post(this.url + 'register', registerCredentials)
+      .pipe(
+        map((response) => true)
+      );
+  }
+
   isLogged(): boolean {
     if (this.userService.TokenUser) {
       return true;

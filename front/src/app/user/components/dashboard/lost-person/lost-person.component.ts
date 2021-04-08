@@ -14,7 +14,6 @@ export class LostPersonComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log(this.lost);
   }
 
 }
