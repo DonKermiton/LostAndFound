@@ -9,6 +9,7 @@ namespace api
     {
         public List<Lost> GetAllLost();
         public List<Lost> GetSelected(int take, int skip);
+        void CreateLostPerson(Lost lost);
     }
     
     public class LostPersonService: ILostPerson
@@ -38,6 +39,12 @@ namespace api
             
 
             return lostPersons;
+        }
+
+        public void CreateLostPerson(Lost lost)
+        {
+            _dbContext.Lost.Add(lost);
+            _dbContext.SaveChanges();
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using api.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -29,5 +30,13 @@ namespace api.Controllers
             var lost = _lostPerson.GetSelected(Int32.Parse(take), Int32.Parse(skip));
             return Ok(lost);
         }
+
+        [HttpPost]
+        [Authorize]
+        public ActionResult CreateLost([FromBody] Lost lost)
+        {
+            _lostPerson.CreateLostPerson(lost);
+            return Ok();
+        } 
     }
 }
